@@ -152,8 +152,9 @@ def process_dir(src_path, dst_path):
     for i in files:
         abs_i = os.path.join(src_path, i)
         info('  processing {0}: '.format(abs_i))
-        (orig_datetime, shifted_datetime) = get_media_file_date_time(abs_i)
-        if datetime is not None:
+        dates = get_media_file_date_time(abs_i)
+        if dates is not None:
+            (orig_datetime, shifted_datetime) = dates
             dst_media_path = get_dst_media_path(dst_path, i, orig_datetime,
                                                 shifted_datetime)
             if not dry_run:
