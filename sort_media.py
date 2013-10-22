@@ -94,6 +94,7 @@ def usage():
     print('  --hour-shift=Integer')
     print('  --minute-shift=Integer')
     print('  --second-shift=Integer')
+    sys.exit(1)
 
 def err(message):
     """
@@ -402,11 +403,11 @@ if __name__ == '__main__':
     except getopt.GetoptError as e:
         err(e)
         usage()
-        sys.exit(1)
+    if len(args) == 0:
+        usage()
     for o, v in opts:
         if o == '--help':
             usage()
-            sys.exit(1)
         elif o == '--move':
             action = ACTION_MOVE
         elif o == '--quiet':
