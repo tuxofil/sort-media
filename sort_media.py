@@ -40,7 +40,7 @@ import shutil
 import subprocess
 import EXIF
 
-SUPPORTED_VIDEO_EXTENSIONS = ['avi', 'mpg', 'mp4', '3gp', 'mov']
+SUPPORTED_VIDEO_EXTENSIONS = ['avi', 'mpg', 'mp4', '3gp', 'mov', 'm4v']
 SUPPORTED_IMAGE_EXTENSIONS = ['jpeg', 'jpg', 'png']
 
 # Unfortunately, there is no package like python-ffmpeg (or pyffmpeg
