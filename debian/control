@@ -1,0 +1,21 @@
+Source: sort-media
+Section: utils
+Priority: extra
+Maintainer: Aleksey Morarash <aleksey.morarash@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/tuxofil/sort-media
+Vcs-Browser: https://github.com/tuxofil/sort-media
+Vcs-Git: https://github.com/tuxofil/sort-media.git
+
+Package: sort-media
+Architecture: all
+Depends: python, python-exif, ffmpeg
+Description: Sort photo and video files according to date
+ This command line tool helps to organize media files from your
+ camera by date and time. It moves (or copies) source files
+ to destination directory sorting them by subdirs like
+ '$YEAR/$YEAR-$MONTH-$DAY/$HOUR:$MINUTE:$SECOND $FILENAME'.
+ For the case when date/time on your camera is not set
+ correctly, you can correct sorting results supplying
+ date/time shifting command line options.

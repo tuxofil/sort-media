@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+%:
+	dh $@
+
+# Implement staged installation
+DESTDIR = debian/sort-media
+override_dh_install:
+	install -m 755 -d $(DESTDIR)/usr/bin
+	install -m 755 sort_media.py $(DESTDIR)/usr/bin/sort-media
