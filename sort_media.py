@@ -19,7 +19,7 @@ badly supported date and time. You can define time shifting with
 command line options. The media files metainfo will NOT be affected
 by this shifting but only new file locations and names.
 
-Command line arguments and options. Invocate the script with single
+Command line arguments and options. Invoke the script with a single
 '--help' option to see brief cheat-sheet.
 
 Dependencies:
