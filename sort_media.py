@@ -47,9 +47,14 @@ SUPPORTED_IMAGE_EXTENSIONS = ['jpeg', 'jpg', 'png', 'tif', 'tiff']
 # from Google) so I decided to call ffmpeg directly through the shell.
 # It's not a big overhead for time-to-time task, really.
 FETCH_VIDEO_DATETIME_CMD = \
-    'ffmpeg -y -v quiet -i "{0}" -f ffmetadata - | ' + \
-    'grep creation_time | sed -r \'s/^.+=//\' | ' + \
-    'sed -r \'s/(-|:)/ /g\''
+    """
+    ffmpeg -y -i "{0}" -f ffmetadata - 2>&1 \
+    | grep creation_time \
+    | head -1 \
+    | sed -r 's/^[^:]+:\s+//' \
+    | sed -r 's/^.+=//' \
+    | sed -r 's/(-|:)/ /g'
+    """
 
 # ----------------------------------------------------------------------
 # internal definitions
