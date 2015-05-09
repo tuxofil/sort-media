@@ -234,11 +234,14 @@ def get_media_file_date_time(path):
     """
     Read creation date and time from given media file metadata.
     Requested time shifting will be applyed automatically.
+    Return tuple (orig_datetime, shifted_datetime) on success,
+    where orig_datetime and shifted_datetime is instance of
+    datetime.datetime class.
     Return None if no date/time info found.
 
     :param path: media file path
     :type path: string
-    :rtype: instance of datetime.datetime class or None
+    :rtype: tuple or None
     """
     time_struct = None
     ext = os.path.splitext(path)[1].lstrip('.').lower()
