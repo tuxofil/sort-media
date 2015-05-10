@@ -1,3 +1,10 @@
+sort-media (0.1.2) unstable; urgency=low
+
+  * fix fetching date and time from movies;
+  * docstring fix.
+
+ -- Aleksey Morarash <aleksey.morarash@gmail.com>  Sun, 10 May 2015 09:17:00 +0300
+
 sort-media (0.1.1-1) unstable; urgency=low
 
   * Add TIFF to the list of known image types.
